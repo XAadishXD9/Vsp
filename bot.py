@@ -14,7 +14,7 @@ from discord import app_commands
 import requests
 
 # Set Your Bot Token dude 
-TOKEN = 'MTQwODMwNTgwMjY5NTE0NzU5MQ.GAmD9x.mGhkhZLFCo9kl34KGZgfn3DhSd4owCOZXm_-qA'
+TOKEN = 'MTQwODMwNTgwMjY5NTE0NzU5MQ.GpdLrK.TI2VvnjWoTnHqgfiKzAnDLjw51leBiOtUXflzI'
 RAM_LIMIT = '2g' #Set Your Own Ram How Much You Want To Give Your Users
 SERVER_LIMIT = 2 #you can change it!
 database_file = 'database.txt'
@@ -26,7 +26,7 @@ intents.message_content = False
 bot = commands.Bot(command_prefix='/', intents=intents)
 client = docker.from_env()
 
-whitelist_ids = {"1128161197766746213"}  # Replace with actual user IDs
+whitelist_ids = {"1405778722732376176"}  # Replace with actual user IDs
 
 # Utility Functions
 def add_to_database(userid, container_name, ssh_command):
@@ -278,7 +278,7 @@ async def capture_ssh_session_line(process):
             return output.split("ssh session:")[1].strip()
     return None
 
-whitelist_ids = {"1128161197766746213"}  # Replace with actual user IDs
+whitelist_ids = {"1405778722732376176"}  # Replace with actual user IDs
 
 @bot.tree.command(name="remove-everything", description="Removes all data and containers")
 async def remove_everything(interaction: discord.Interaction):
